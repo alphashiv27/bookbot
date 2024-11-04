@@ -1,8 +1,8 @@
 from collections import Counter
 
 
-def read_file():
-    with open("books/frankenstein.txt") as f:
+def read_file(filepath):
+    with open(filepath) as f:
         file_content =f.read()
         return file_content
 
@@ -28,4 +28,8 @@ def count_chars(file_content):
 def count_words(file_content):
     return len(file_content.split())
 
-print_report(read_file())
+
+# 1. Create a directory `books` in the root directory
+# 2. Add a text file on any book
+# 3. Paste the path here to get your report
+print_report(read_file("books/frankenstein.txt"))
